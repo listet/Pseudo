@@ -36,22 +36,19 @@ END
 // Skriv din pseudokod innanför nedanstående kommentarsblock
 /*
 
-function play()
+FUNCTION play()
     SET variabel ordbok = [..., ..., ...]; // Innehåller ALLA ord i det engelska språket
     SET variabel startOrd till "FOUR";
     SET variabel slutOrd till "FIVE";
     SET variabel loop till true
 
-    WHILE loop // går så länge spelet är igång tills slutOrd uppnåtts.   
+    WHILE loop // så länge startOrd !== slutOrd
         SET variabel gissning = användarinput;
 
-        IF gissning innehåller 4 bokstäver så:
-            IF gissning finns i ordbok så:
-                IF isOneLetterApart(startOrd, gissning) så:
+        IF gissning innehåller 4 bokstäver;
+            IF gissning finns i ordbok;
+                IF isOneLetterApart(startOrd, gissning);
                     SET startOrd = gissning; //uppdatera startOrd till det senaste giltiga ordet
-                    IF startOrd = slutOrd så: 
-                        SET loop till false; // Avsluta loopen om slutOrd är uppnått
-                        PRINT "Du lyckades!";
                     ELSE 
                         PRINT "Bra jobbat! Fortsätt till nästa ord..."
                     END IF
@@ -65,6 +62,8 @@ function play()
             PRINT "Ditt ord måste innehålla 4 bokstäver!";
         END IF
     END WHILE
+    PRINT "Du lyckades!";
+
 END FUNCTION
 
 
